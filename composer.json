@@ -1,9 +1,9 @@
 {
-    "name": "jdare/clank-bundle",
+    "name": "cuville/clank-bundle",
     "type": "symfony-bundle",
     "description": "Symfony ClankBundle",
     "keywords": ["Web Socket Application"],
-    "homepage": "https://github.com/JDare/ClankBundle",
+    "homepage": "https://github.com/cuville/ClankBundle",
     "license": "MIT",
     "authors": [
         {
