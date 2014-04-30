@@ -4,6 +4,7 @@ namespace JDare\ClankBundle\Server\Type;
 
 use JDare\ClankBundle\Periodic\PeriodicInterface;
 use JDare\ClankBundle\Event\ServerEvent;
+use Ratchet\Http\HttpServer;
 use Ratchet\WebSocket\WsServer;
 use Ratchet\Wamp\WampServer;
 use Ratchet\Session\SessionProvider;
@@ -94,10 +95,12 @@ class WebSocketServerType implements ServerTypeInterface
             );
         }
 
-
-        $this->app = new WsServer(
-            $serverStack
+        $this->app = new HttpServer(
+            new WsServer(
+                $serverStack
+            )
         );
+
     }
 
     /**
